@@ -35,16 +35,13 @@
 // This determines the communication speed of the printer
 #define BAUDRATE 250000
 
-<<<<<<< HEAD
 #define MOTHERBOARD 33
 
-=======
 // This enables the serial port associated to the Bluetooth interface
 //#define BTENABLED              // Enable BT interface on AT90USB devices
 
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
->>>>>>> upstream/Marlin_v1
 #ifndef MOTHERBOARD
   #define MOTHERBOARD BOARD_ULTIMAKER
 #endif
@@ -291,20 +288,13 @@ your extruder heater takes 2 minutes to hit the target on heating.
 #endif
 
 // The pullups are needed if you directly connect a mechanical endswitch between the signal and ground pins.
-<<<<<<< HEAD
-const bool X_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
-const bool Y_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
-const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
-#define DISABLE_MAX_ENDSTOPS
-=======
-const bool X_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Y_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Z_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool X_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
+const bool Y_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
+const bool Z_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 const bool X_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 const bool Y_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-//#define DISABLE_MAX_ENDSTOPS
->>>>>>> upstream/Marlin_v1
+#define DISABLE_MAX_ENDSTOPS
 //#define DISABLE_MIN_ENDSTOPS
 
 // Disable max endstops for compatibility with endstop checking routine
@@ -465,7 +455,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 #define XY_STEPS 200*16/2/18    // motor_steps_per_rev * driver_microstep / belt_pitch / pulley_number_of_teeth
 #define Z_STEPS 200*16/1.25    // motor_steps_per_rev * driver_microstep / thread_pitch
-#define E_STEPS 2560    // motor_steps_per_rev * driver_microstep * big_gear_teeth / small_gear_teeth / pi / hob_effective_diameter
+#define E_STEPS 515.91048    // motor_steps_per_rev * driver_microstep * big_gear_teeth / small_gear_teeth / pi / hob_effective_diameter
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {XY_STEPS,XY_STEPS,Z_STEPS,E_STEPS}
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 25}    // (mm/sec)
